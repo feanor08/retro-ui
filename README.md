@@ -1,5 +1,5 @@
-# X Wing : Pixel Art
-#####Pure CSS X Wing!
+# Retro UI
+#####A Retro UI Collection
 <div style="text-align:center">
     <img src='./demo/demo-image.png' />
 </div>
@@ -11,11 +11,11 @@
 ****
 
 ```js
-npm i pixelated-pure-css-x-wing
+npm i @feanor/retro-ui
 ```
 
-```sh
-yarn add pixelated-pure-css-x-wing
+```js
+yarn add @feanor/retro-ui
 ```
 
 ### Basic Usage
@@ -25,30 +25,13 @@ yarn add pixelated-pure-css-x-wing
 This is the minimal configuration.
 
 ```
-import PixalatedPureCssXWing from 'pixelated-pure-css-x-wing'
+import {NESButton} from '@feanor/retro-ui'
 ```
 
 ```
-<PixalatedPureCssXWing />
+<NESButton />
 ```
 
-The components can be configured with height, width or rotation.
-
-````
- <PixalatedPureCssXWing rotation="270deg" height="100px" />
-````
-
-````
- <PixalatedPureCssXWing rotation="90deg" height="20vh" width="300px" />
-````
-
-##### Default Props
-
-````
-height:'300px'
-width:'300px'
-rotation:null
-````
 
 
 
