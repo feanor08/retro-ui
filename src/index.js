@@ -1,5 +1,6 @@
 import React from "react";
-import './nes.scss';
+import './nes.css';
+
 
 
 function NESButton() {
