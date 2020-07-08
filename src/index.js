@@ -1,11 +1,17 @@
 import React from "react";
+import './nes.scss';
 
 
-function ComponentNameHere() {
+function NESButton() {
   
   return (
-    <div>
-        Feanor says Hi!
+    <div class="button-normal">
+      <div class="black-fat" />
+      <div class="black-tall" />
+      <div class="middle">
+        <div class="top" />
+      </div>
+      <p>feanor</p>
     </div>
   );
 }

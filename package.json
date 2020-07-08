@@ -1,7 +1,7 @@
 {
-  "name": "react-to-npm-boilerplate-YOUR-PACKAGE_NAME-HERE",
+  "name": "@feanor/retro-ui",
   "version": "1.0.0",
-  "description": "Your App Description Here",
+  "description": "Collection Of Retro UI Components",
   "main": "./build/index.js",
   "scripts": {
     "build": "webpack"
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/feanor08/pixelated-pure-css-x-wing"
+    "url": "https://github.com/feanor08/retro-ui.git"
   },
   "author": "feanor08",
   "license": "MIT",
