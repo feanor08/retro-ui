@@ -12,10 +12,10 @@ const normalButton = {
 function NESButton() {
   return (
     <div class="button-normal" >
-      <div class="black-fat" style={normalButton.bottom}/>
-      <div class="black-tall" style={normalButton.bottom}/>
-      <div class="middle" style={normalButton.shadow}>
-        <div class="top" style={normalButton.top}/>
+      <div class="black-fat" />
+      <div class="black-tall" />
+      <div class="middle">
+        <div class="top" />
       </div>
       <p>feanor</p>
     </div>
