@@ -9,7 +9,6 @@ const normalButton = {
 };
 
 
-
 function NESButton() {
   return (
     <div class="button-normal" >
