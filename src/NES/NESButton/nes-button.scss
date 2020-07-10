@@ -1,22 +1,18 @@
 @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap);
 
-$size: 500px;
+$size: 300px;
 $border-color: black;
-$normal-top: rgb(32, 156, 238);
-$normal-shadow: rgb(0, 107, 179);
-$normal-selected: rgb(16, 141, 224);
+$normal-top:white;
+$normal-shadow:rgb(173, 175, 188);
+$normal-selected:rgb(231, 231, 231);
 
-.button-prime {
-  width: $size;
-  height: $size/2.8;
+.button-normal {
   line-height: 100px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   p {
-    letter-spacing: $size/75;
-    color: white;
     position: absolute;
     margin: 0 auto;
     width: auto;
@@ -26,18 +22,17 @@ $normal-selected: rgb(16, 141, 224);
     text-align: center;
     font-family: 'Press Start 2P', cursive;
     font-size: $size/10;
+    user-select: none;
   }
   .black-fat {
     width: 100%;
     height: 88%;
-    background-color: $border-color;
     position: absolute;
     margin: 0 auto;
   }
   .black-tall {
     width: 94%;
     height: 100%;
-    background-color: $border-color;
     position: absolute;
     margin: 0 auto;
   }
@@ -47,13 +42,11 @@ $normal-selected: rgb(16, 141, 224);
     position: absolute;
     margin: 0 auto;
     align-self: center;
-    background-color: $normal-shadow;
     .top {
       width: 97%;
       height: 91%;
       position: absolute;
       margin: 0 auto;
-      background-color: $normal-top;
     }
   }
   &:hover {
@@ -73,11 +66,10 @@ $normal-selected: rgb(16, 141, 224);
       .top {
         width: 97%;
         height: 91%;
-        background-color: $normal-selected;
         bottom: 0;
         right: 0;
       }
     }
-
   }
 }
+

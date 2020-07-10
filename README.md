@@ -26,12 +26,21 @@ This is the minimal configuration.
 
 ```
 import {NESButton} from '@feanor/retro-ui'
-import {PrimeButton} from '@feanor/retro-ui'
 ```
 
+Use the Component as so :
 ```
 <NESButton />
 ```
+
+### Custom Props
+The components can be configured with Type, Text, Size and Text Color.
+
+<NESButton btnType="success"/>
+
+<NESButton btnType="blue" btnSize={500} btnText="Blue Button" />
+
+
 
 
 
