@@ -11,11 +11,11 @@
 ****
 
 ```js
-npm i @feanor/retro-ui
+npm i @feanor08/retro-ui
 ```
 
 ```js
-yarn add @feanor/retro-ui
+yarn add @feanor08/retro-ui
 ```
 
 ### Basic Usage
@@ -26,6 +26,7 @@ This is the minimal configuration.
 
 ```
 import {NESButton} from '@feanor/retro-ui'
+import {PrimeButton} from '@feanor/retro-ui'
 ```
 
 ```

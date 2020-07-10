@@ -6,7 +6,7 @@ $normal-top: rgb(32, 156, 238);
 $normal-shadow: rgb(0, 107, 179);
 $normal-selected: rgb(16, 141, 224);
 
-.button-normal {
+.button-prime {
   width: $size;
   height: $size/2.8;
   line-height: 100px;
@@ -78,8 +78,6 @@ $normal-selected: rgb(16, 141, 224);
         right: 0;
       }
     }
-    // p {
-    //   font-size: $size/9;
-    // }
+
   }
 }

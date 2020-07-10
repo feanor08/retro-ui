@@ -1,4 +1,5 @@
-import NESButton from './NES/Button/'
+import NESButton from './NES/Button/';
+import PrimeButton from './NES/PrimeButton/';
 
 
-export default NESButton;
+export default {NESButton,PrimeButton};

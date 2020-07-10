@@ -1,5 +1,5 @@
 import React from "react";
-import './nes-button.css';
+import './nes-button.scss';
 
 const normalButton = {
     bottom: 'black',

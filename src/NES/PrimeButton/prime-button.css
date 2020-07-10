@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap);
+.button-normal {
+  width: 300px;
+  height: 107.14286px;
+  line-height: 100px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button-normal p {
+  position: absolute;
+  margin: 0 auto;
+  width: auto;
+  white-space: normal;
+  height: auto;
+  line-height: inherit;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 30px;
+}
+
+.button-normal .black-fat {
+  width: 100%;
+  height: 88%;
+  background-color: black;
+  position: absolute;
+  margin: 0 auto;
+}
+
+.button-normal .black-tall {
+  width: 94%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  margin: 0 auto;
+}
+
+.button-normal .middle {
+  width: 94%;
+  height: 86%;
+  position: absolute;
+  margin: 0 auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #adafbc;
+}
+
+.button-normal .middle .top {
+  width: 97%;
+  height: 91%;
+  position: absolute;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.button-normal:hover .middle .top {
+  width: 95%;
+  height: 86%;
+  background-color: #e7e7e7;
+}
+
+.button-normal:hover p {
+  font-size: 33.33333px;
+}
+/*# sourceMappingURL=nes-button.css.map */
