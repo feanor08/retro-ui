@@ -2,9 +2,9 @@
 
 $size: 500px;
 $border-color: black;
-$normal-top: rgb(32, 156, 238);
-$normal-shadow: rgb(0, 107, 179);
-$normal-selected: rgb(16, 141, 224);
+$normal-top:white;
+$normal-shadow:rgb(173, 175, 188);
+$normal-selected:rgb(231, 231, 231);
 
 .button-normal {
   width: $size;
@@ -16,7 +16,7 @@ $normal-selected: rgb(16, 141, 224);
   align-items: center;
   p {
     letter-spacing: $size/75;
-    color: white;
+    color: black;
     position: absolute;
     margin: 0 auto;
     width: auto;
