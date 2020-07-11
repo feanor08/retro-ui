@@ -2,7 +2,7 @@
 
 
 
-.button-normal {
+.button-active {
   line-height: 100px;
   position: relative;
   display: flex;
@@ -38,30 +38,14 @@
     margin: 0 auto;
     align-self: center;
     .top {
-      width: 97%;
-      height: 91%;
       position: absolute;
       margin: 0 auto;
+      width: 97%;
+      height: 91%;
+      bottom: 0;
+      right: 0;
     }
   }
-  &:hover {
-    .middle {
-      .top {
-        width: 95%;
-        height: 86%;
-      }
-    }
-
-  }
-  &:active {
-    .middle {
-      .top {
-        width: 97%;
-        height: 91%;
-        bottom: 0;
-        right: 0;
-      }
-    }
-  }
+  
 }
 

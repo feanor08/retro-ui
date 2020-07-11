@@ -1,8 +1,13 @@
 import React from "react";
 import './nes-button.scss';
 import './disabled-button.scss';
+import './active-button.scss';
+
 import { useRef, useState, useEffect } from 'react';
 
+
+// ***Predefined Button Properties***
+//Normal Button and Default
 const normalButtonColors = {
     bottom: 'black',
     shadow: 'rgb(173, 175, 188)',
@@ -11,30 +16,37 @@ const normalButtonColors = {
     text:'black'
 }
 
+//BlueButton
 const blueButtonColors = {
     bottom: 'black',
     shadow: 'rgb(0, 107, 179)',
     top:'rgb(32, 156, 238)',
     selected:'rgb(16, 141, 224)',
     text:'white'
+
 }
 
+//Warning Button
 const warningButtonColors = {
     bottom: 'black',
     shadow: 'rgb(229, 148, 0)',
     top:'rgb(247, 213, 29)',
     selected:'rgb(242, 196, 9)',
     text:'black'
+
 }
 
+//Success Button
 const successButtonColors = {
     bottom: 'black',
     shadow: 'rgb(74, 165, 46)',
     top:'rgb(146, 204, 65)',
     selected:'rgb(118, 196, 66)',
     text:'white'
+
 }
 
+//Error Button
 const errorButtonColors = {
     bottom: 'black',
     shadow: 'rgb(140, 32, 34)',
@@ -42,6 +54,8 @@ const errorButtonColors = {
     selected:'rgb(206, 55, 43)',
     text:'white'
 }
+
+//Disabled Button
 const disabledButtonColors = {
     bottom: 'rgb(121, 123, 126)',
     shadow: 'rgb(205, 206, 214)',
@@ -50,11 +64,15 @@ const disabledButtonColors = {
     text:'rgb(121, 123, 126)'
 }
 
+//Hover Hook Function
 function useHover() {
     const [value, setValue] = useState(false);
+  
     const ref = useRef(null);
+  
     const handleMouseOver = () => setValue(true);
     const handleMouseOut = () => setValue(false);
+  
     useEffect(
       () => {
         const node = ref.current;
@@ -70,52 +88,91 @@ function useHover() {
       },
       [ref.current] // Recall only if ref changes
     );
+  
     return [ref, value];
 }
 
-
-function NESButton({btnType, btnText, btnSize, btnTextColor}) {
-    const [hoverRef, isHovered] = useHover();
-    btnSize=btnSize?btnSize:'400';
-    var currentButtonColors 
-    switch(btnType){
+//Generates Style Class for buttons
+const styleClassToUse = (buttonType) => {   
+    switch(buttonType){
         case "blue":
-            currentButtonColors = blueButtonColors;
+            return blueButtonColors;
             break;
         case "warning":
-            currentButtonColors= warningButtonColors;
+            return warningButtonColors;
             break;
         case "success":
-            currentButtonColors= successButtonColors;
+            return successButtonColors;
             break;
         case "error":
-            currentButtonColors= errorButtonColors;
+            return errorButtonColors;
             break;
         case "disabled":
-            currentButtonColors= disabledButtonColors;
+            return disabledButtonColors;
             break;
         default:
-            currentButtonColors=normalButtonColors;
+            return normalButtonColors;
         break;
     }
+}
+
+//Check if Button type is Disabled or Active
+const isButtonDisabledOrActive=(btnType,isBtnActive)=>{
+    if(btnType==='disabled')
+        return 'button-disabled';
+    else if(isBtnActive===true)
+        return 'button-active';
+    else
+        return 'button-normal';
+}
+
+const customButtonColors = (customBackColor,customShadowColor,customTopColor,customTopSelectedColor,customTextColor)=>{
+    return {
+        bottom: customBackColor,
+        shadow: customShadowColor,
+        top:customTopColor,
+        selected:customTopSelectedColor,
+        text:customTextColor
+    }
+}
+
+//Generate Button Dimensions
+const buttonDimensions=(btnSize)=>{
+    return {
+        width:`${btnSize}px`,
+        height:`${btnSize/3}px`
+    }
+}
+
+
+function NESButton({btnType="normal", btnText='feanor08', btnSize='300', isBtnActive=false, customBackColor='black', customShadowColor='rgb(173, 175, 188)', customTopColor='white',customTopSelectedColor='rgb(231, 231, 231)',customTextColor='black'}) {
+
+    const [hoverRef, isHovered] = useHover();
+
+    const currentButtonColors=btnType==="custom"?customButtonColors(customBackColor,customShadowColor,customTopColor,customTopSelectedColor,customTextColor): styleClassToUse(btnType);
+
+
+
     return (
-        <div className={`${btnType==='disabled'?'button-disabled':'button-normal'}`} 
+        <div className={isButtonDisabledOrActive(btnType,isBtnActive)} 
         ref={hoverRef} 
-        style={{width:`${btnSize}px`,height:`${btnSize/3}px`}} >
+        style={buttonDimensions(btnSize)} >
             <div className="black-fat" style={{backgroundColor:`${currentButtonColors.bottom}`}} />
             <div className="black-tall" style={{backgroundColor:`${currentButtonColors.bottom}`}} />
             <div className="middle" style={{backgroundColor:`${ currentButtonColors.shadow}`}}>
-                <div className="top"  style={{backgroundColor:`${isHovered? currentButtonColors.selected :currentButtonColors.top}`}}  />
+
+                <div className="top"  style={{backgroundColor:`${isHovered && !isBtnActive? currentButtonColors.selected :(isBtnActive?currentButtonColors.selected :currentButtonColors.top)}`}}  />
                 <div className={`${btnType==='disabled'?'bar-w':' '}`} style={{backgroundColor:`${btnType==='disabled'? (currentButtonColors.top? currentButtonColors.top:currentButtonColors.top):'transparent'}`}}/>
                 <div className={`${btnType==='disabled'?'bar-h':' '}`} style={{backgroundColor:`${btnType==='disabled'? (currentButtonColors.top? currentButtonColors.top:currentButtonColors.top):'transparent'}`}}/>
 
             </div>
-            <p style={{color:`${btnTextColor?btnTextColor:currentButtonColors.text}`,
-            fontSize:`${isHovered?btnSize/12:btnSize/16}px`,
+            <p style={{color:`${currentButtonColors.text}`,fontSize:`${isHovered && !isBtnActive?btnSize/14.5:(isBtnActive?btnSize/14.5: btnSize/16)}px`,
             letterSpacing:`${btnSize/75}px`}}>
-                {btnText?btnText:"button"}
+                {btnText}
             </p>
         </div>
     );
-}   
+    }   
+
+
 export default NESButton;
