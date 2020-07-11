@@ -28,8 +28,8 @@ yarn add @feanor08/retro-ui
 ****
 ### UI Components
 ****
-+  ###**NES**
-   + [NES Button](demo/docs/NESButton.md) 
+ ### **NES**
+   + [NES Button](https://github.com/feanor08/retro-ui/blob/master/demo/docs/NESButton.md) 
 
 
 

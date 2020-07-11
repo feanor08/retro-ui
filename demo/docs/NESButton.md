@@ -1,12 +1,12 @@
 
 ****
-###NES Button
+ ### NES Button
 ****
 
 ![NESButton](../images/nes-success.gif) ![NESButton](../images/nes-blue.gif)  ![NESButton](../images/nes-error.gif) ![NESButton](../images/nes-warning.gif) 
 
 ****
-###Usage
+ ### Usage
 ****
 This is the minimal configuration.
 
