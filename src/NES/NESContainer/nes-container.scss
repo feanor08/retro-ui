@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap);
+
+.nes-container{
+    height: auto;
+    display: block;
+    overflow: auto;
+    clear: both;
+    position: relative;
+    padding: 1% 0% 0% 0%;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 100%;
+    .container-title{
+        height: fit-content;
+        width: fit-content;
+        background-color: white;
+        margin-bottom: 0px;
+        width: fit-content;
+        top: 0.5%; right: 0; bottom: 0; left: 3%;
+        position: absolute;
+        padding :0% 1%;
+        font-size: 110%;
+        display: block;
+    }
+    .container-contents{
+        font-size: 80%;
+        height: fit-content;
+        width: fit-content;
+        border:4px solid black;
+        padding: 2%;
+        line-height: 200%;
+    }
+  
+}

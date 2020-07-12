@@ -145,7 +145,7 @@ const buttonDimensions=(btnSize)=>{
 }
 
 
-function NESButton({btnType="normal", btnText='feanor08', btnSize='300', isBtnActive=false, customBackColor='black', customShadowColor='rgb(173, 175, 188)', customTopColor='white',customTopSelectedColor='rgb(231, 231, 231)',customTextColor='black'}) {
+function NESButton({btnType="normal",children, btnSize='300', isBtnActive=false, customBackColor='black', customShadowColor='rgb(173, 175, 188)', customTopColor='white',customTopSelectedColor='rgb(231, 231, 231)',customTextColor='black'}) {
 
     const [hoverRef, isHovered] = useHover();
 
@@ -168,7 +168,7 @@ function NESButton({btnType="normal", btnText='feanor08', btnSize='300', isBtnAc
             </div>
             <p style={{color:`${currentButtonColors.text}`,fontSize:`${isHovered && !isBtnActive?btnSize/14.5:(isBtnActive?btnSize/14.5: btnSize/16)}px`,
             letterSpacing:`${btnSize/75}px`}}>
-                {btnText}
+                {children}
             </p>
         </div>
     );

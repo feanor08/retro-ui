@@ -16,7 +16,7 @@ import {NESButton} from '@feanor/retro-ui'
 
 Use the Component as so :
 ```jsx
-<NESButton />
+<NESButton> NES </NESButton>
 ```
  ![NESButton](../images/nes-normal.gif)
 
@@ -26,20 +26,20 @@ Use the Component as so :
 
 There are predefined buttons available for different scenarios : 
 ```jsx
-<NESButton btnType="success" btnText-"success"/>
+<NESButton btnType="success"> Success </NESButton>
 ```
  ![NESButton](../images/nes-success.gif)
 
 ```jsx
-<NESButton btnType="blue"  btnText="Blues" />
+<NESButton btnType="blue"> Blues </NESButton>
 ```
  ![NESButton](../images/nes-blue.gif)
 ```jsx
-<NESButton btnType="error"  btnText="Error!" />
+<NESButton btnType="error"> Error! </NESButton>
 ```
  ![NESButton](../images/nes-error.gif)
 ```jsx
-<NESButton btnType="warning" btnText="Danger" />
+<NESButton btnType="warning"> Danger </NESButton>
 ```
  ![NESButton](../images/nes-warning.gif)
 
@@ -49,12 +49,12 @@ There are predefined buttons available for different scenarios :
  + #### Active Button :
  A button can be set as active using this :
 ```jsx
-<NESButton btnText="feanor08" isBtnActive=true />
+<NESButton isBtnActive=true> feanor08 </NESButton>
 ```
  ![NESButton](../images/nes-active.gif)
 +  #### Disabled Button :
  ```jsx
- <NESButton btnType="disabled"  btnText="disabled" />
+ <NESButton btnText="disabled"> disabled </NESButton>
  ```
  ![NESButton](../images/nes-disabled.png)
 ****
@@ -65,11 +65,7 @@ There are predefined buttons available for different scenarios :
 + **btnType**   : 
    *default*    : "normal"
    *values*     : "normal" "blue" "success" "warning" "success" "error" "disabled" "custom"
-
-+ **btnText**   :
-   *default*    : "feanor08"
-   *note*       : Expects a string value here.  
-
+ 
 + **btnSize**   :
    *default*    : "300"
    *note*       : Expects a numeric value. The value is used as so :
