@@ -8,7 +8,7 @@ on:
 
 
 jobs:
-  setup-environment:
+  publish-to-npmJS:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,10 +22,7 @@ jobs:
         node-version: 12
         registry-url: https://registry.npmjs.org/
   
-  install-dependencies-and-build:
-    runs-on: ubuntu-latest
 
-    steps:
     # Installs necessary packages
     - name: package-install
       run: yarn install
@@ -35,10 +32,7 @@ jobs:
       run: npm run-script build
 
 
-  # publish-build:
-  #   runs-on: ubuntu-latest
 
-  #   steps:
   #   # Publishes to npmJS
   #   - name: npm-publish
   #     run: npm publish --access public
