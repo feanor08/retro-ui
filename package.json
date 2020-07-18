@@ -1,6 +1,6 @@
 {
   "name": "@feanor08/retro-ui",
-  "version": "1.4.0",
+  "version": "1.5.2",
   "description": "Collection Of Retro UI Components",
   "main": "./build/index.js",
   "scripts": {
@@ -33,7 +33,6 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "@material/react-button": "^0.15.0",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

@@ -3,23 +3,26 @@
 .nes-container{
     height: auto;
     display: block;
-    overflow: auto;
+    // overflow: auto;
+    width:fit-content;
     clear: both;
     position: relative;
-    padding: 1% 0% 0% 0%;
+    padding: 1% 0.5% 0.5% 0.5%;
     font-family: 'Press Start 2P', cursive;
     font-size: 100%;
     .container-title{
-        height: fit-content;
+        height:30px;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
+        max-height:fit-content;
         background-color: white;
         margin-bottom: 0px;
-        width: fit-content;
         top: 0.5%; right: 0; bottom: 0; left: 3%;
         position: absolute;
         padding :0% 1%;
         font-size: 110%;
-        display: block;
+        display: inline-block;
     }
     .container-contents{
         font-size: 80%;
