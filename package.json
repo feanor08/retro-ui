@@ -1,7 +1,7 @@
 {
   "name": "@feanor08/retro-ui",
   "version": "1.5.3",
-  "description": "Collection Of Retro UI Components. Currently working on NES components.",
+  "description": "Collection Of Retro UI Components. Currently working on NES components. ",
   "main": "./build/index.js",
   "scripts": {
     "build": "webpack"
